@@ -1,0 +1,60 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab</title>
+    <link rel="shortcut icon" href="{% static '/globe.png' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+</head>
+<!--Container Div-->
+<div class="Space-Rabbit">
+ <!--Navbar-->
+ <nav class="navbar bg-body-tertiary nev">
+    <div class="container-fluid navs">
+      <a class="navbar-brand " href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="{% static '/globe.png' %}" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        HTTP TRAINING
+      </a>
+    </div>
+  </nav>
+<body>
+   <div class="back-color">
+    <!--Body-->
+    <div class="row big-boss-rabbit">
+        <div class="col-sm-3 mb-3 mb-sm-0">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cookie</h5>
+              <p class="card-text">Generate a cookie for this domain!</p>
+              <a id="cookie"  class="btn btn-primary">Generates a cookie!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">CORS issue</h5>
+              <p class="card-text">Check your terminal when a CORS issue it's ocurring</p>
+              <a href="#" class="btn btn-primary">Go somewhere for CORS</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">CSP</h5>
+                <p class="card-text">Check your terminal when a CSP issue it's ocurring</p>
+                <a href="#" class="btn btn-primary">Go somewhere for CSP</a>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+</body>
+
+</div>
+</html>

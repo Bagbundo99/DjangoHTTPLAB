@@ -1,0 +1,50 @@
+.navs{
+   
+    background-color:#579BB1;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.nev{
+    padding: 0%;
+
+}
+
+.big-boss-rabbit{
+    margin-top: 15%;
+    margin-left: 20%;
+ 
+}
+
+@media (max-width: 480px) {
+   .big-boss-rabbit{
+    margin: 0%;
+   }
+  }
+
+
+/*https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space */  
+.space-rabbit .back-color{
+    background-color: #E1D7C6;
+    flex: 1 1 auto;
+
+}
+
+.space-rabbit{
+    flex-flow: column;
+    display: flex;
+    height: 100%;
+}
+
+.space-rabbit .nev{
+    flex: 0 1 auto;
+}
+
+.card-body{
+  background-color: #F8F4EA;
+}
+
+.btn-primary{
+    background-color:#579BB1;
+}
+
