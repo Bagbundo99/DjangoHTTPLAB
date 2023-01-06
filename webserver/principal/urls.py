@@ -5,4 +5,4 @@ from .views import index,cookie
 # app_name = "blog"
 
 urlpatterns = [path("", index, name="index"),
-            path('cookie/',cookie,name=cookie)]
+            path('cookie/',cookie,name='cookie'),]
