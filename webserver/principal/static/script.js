@@ -20,7 +20,27 @@ function getCors(){
 }
 
 function csp(){
-    document.getElementsByClassName("Space-Rabbit").appendChild("<img src=\"http://error.nachosite.com/media/images.jpeg\" alt=\"Girl in a jacket\" width=\"500\" height=\"600\"></img>")
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          loadCard(this.response);
+        }
+     };
+
+    const url = "http://principal.nachosite.com/card";
+    xhr.open("GET", url,true);
+    xhr.responseType = 'document'
+    xhr.send()
+    
+   
+
+ 
 }
 
+function loadCard(card){
+    const doc = card
+    strcard = new XMLSerializer().serializeToString(card)
+    document.getElementById("Spac-Rabbit").insertAdjacentHTML("beforeend",strcard)
+
+}
 

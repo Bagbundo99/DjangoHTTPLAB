@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; img-src 'self' https://*; 'style-src' 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css;'script-src' 'self' 'unsafe-inline'; "/>
+    content="default-src 'self'; img-src 'self' https://*; style-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css;script-src 'self' 'unsafe-inline'; "/>
     
 
     <title>Lab</title>
@@ -15,7 +15,7 @@
     <script src="{% static '/script.js' %}"></script>
 </head>
 <!--Container Div-->
-<div class="Space-Rabbit">
+<div class="Space-Rabbit" >
  <!--Navbar-->
  <nav class="navbar bg-body-tertiary nev">
     <div class="container-fluid navs">
@@ -28,8 +28,8 @@
 <body>
    <div class="back-color">
     <!--Body-->
-    <div class="row big-boss-rabbit">
-        <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="row row-cols-3 big-boss-rabbit"  id="Spac-Rabbit">
+        <div class="col-3 mb-3 mb-sm-0">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Cookie</h5>
@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">CORS issue</h5>
@@ -47,7 +47,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">CSP</h5>
@@ -56,6 +56,7 @@
               </div>
             </div>
           </div>
+          
     </div>
   </div>
 

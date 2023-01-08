@@ -15,3 +15,6 @@ def cookie(request):
        cookies= ["White Chocolate Strawberry Cookie","Pineapple Semi-Sweet Cookie","Chewy Chocolate Chip Cookie","White Chocolate Macadamia Nut Cookie","Peanut Butter Blossom","Soft Chewy Oatmeal Raisin Cookie"]
        response.set_cookie("Cookie",value=random.choice(cookies),domain="nachosite.com")
     return response
+
+def card(request):
+    return render(request, 'card.html')
