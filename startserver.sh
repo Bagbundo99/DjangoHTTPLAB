@@ -1,4 +1,5 @@
 #!/bin/bash
+su ubuntu
 source /home/$USER/project/venv/bin/activate
 cd /home/$USER/project/webserver/
 python3 manage.py migrate
