@@ -58,7 +58,7 @@ chown ubuntu:ubuntu -R /home/ubuntu/project
 #starts server
 su ubuntu 
 cd /home/$USER/project
-./startserver.sh
+. startserver.sh
 
 
 
