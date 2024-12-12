@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #install reverse proxy 
-apt update 
-apt-get install -y nginx python3 python3-pip git python3-venv
+apk update
+apk install -y  python3 python3-pip git python3-venv
 touch /etc/nginx/sites-enabled/error
 touch /etc/nginx/sites-enabled/principal
 
@@ -37,28 +37,23 @@ echo "server {
     }
 }" > /etc/nginx/sites-enabled/principal
 
-#start proxy
-systemctl start nginx
-systemctl enable nginx
-systemctl restart nginx
+
 
 #Creates server 
-mkdir /home/ubuntu/project
-cd /home/ubuntu/project
+cd app/
 python3 -m venv venv
-source /home/ubuntu/project/venv/bin/activate
+source /app/venv/bin/activate
 pip install Django django-cors-headers
 
 git clone https://github.com/Bagbundo99/DjangoHTTPLAB.git
 mv DjangoHTTPLAB/* .
 rm -rf DjangoHTTPLAB
-chown ubuntu:ubuntu -R /home/ubuntu/project 
 
 
-#starts server
-su ubuntu 
-cd /home/$USER/project
-. startserver.sh
+
+#start server
+nginx -s reload
+.startserver.sh
 
 
 
