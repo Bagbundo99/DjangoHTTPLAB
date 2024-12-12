@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source /home/ubuntu/project/venv/bin/activate
-cd /home/ubuntu/project/webserver/
+source /app/project/venv/bin/activate
+cd /app/project/webserver/
 python3 manage.py migrate
 python3 manage.py runserver 127.0.0.1:5000  --insecure &
 
