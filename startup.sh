@@ -42,6 +42,8 @@ pip install Django django-cors-headers
 
 
 #run reload
+echo "Starting Nginx..."
+nginx -g "daemon off;"
 nginx -s reload
 
 
