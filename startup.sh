@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#install reverse proxy 
-apk update
-apk install -y  python3 python3-pip git python3-venv
-touch /etc/nginx/sites-enabled/error
-touch /etc/nginx/sites-enabled/principal
-
 #Modifies file 
 echo "server {
     listen        80;
@@ -40,20 +34,15 @@ echo "server {
 
 
 #Creates server 
-cd app/
 python3 -m venv venv
 source /app/venv/bin/activate
 pip install Django django-cors-headers
 
-git clone https://github.com/Bagbundo99/DjangoHTTPLAB.git
-mv DjangoHTTPLAB/* .
-rm -rf DjangoHTTPLAB
 
 
 
-#start server
+#run reload
 nginx -s reload
-.startserver.sh
 
 
 
