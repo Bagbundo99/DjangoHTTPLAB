@@ -58,7 +58,7 @@ echo "Starting Nginx..."
 nginx -g "daemon off;"
 nginx -s reload
 
-
+bash /app/startserver.sh
 
 
 
