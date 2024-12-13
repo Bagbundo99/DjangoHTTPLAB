@@ -3,7 +3,7 @@
 #Modifies file 
 echo "server {
     listen        80;
-    server_name error.nachosite.com;
+    server_name $DOMAIN2;
     location / {
         proxy_pass         http://localhost:4999;
         proxy_http_version 1.1;
@@ -18,7 +18,7 @@ echo "server {
 
 echo "server {
     listen        80;
-    server_name principal.nachosite.com;
+    server_name $DOMAIN1
     location / {
         proxy_pass         http://localhost:5000;
         proxy_http_version 1.1;
