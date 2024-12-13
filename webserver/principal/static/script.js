@@ -1,5 +1,5 @@
 function getCookie(){
-    const url = "http://principal.nachosite.com/cookie/"
+    const url = "http://principal.nacrem.com/cookie/"
         let xhr = new XMLHttpRequest()
         xhr.open('POST',url,true)
         xhr.send('')
@@ -13,7 +13,7 @@ function getCookie(){
 
 function getCors(){
     const xhr = new XMLHttpRequest();
-    const url = "http://error.nachosite.com/cors";
+    const url = "http://error.nacrem.com/cors";
 
     xhr.open("GET", url);
     xhr.send();
@@ -27,7 +27,7 @@ function csp(){
         }
      };
 
-    const url = "http://principal.nachosite.com/card";
+    const url = "http://principal.nacrem.com/card";
     xhr.open("GET", url,true);
     xhr.responseType = 'document'
     xhr.send()
