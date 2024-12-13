@@ -32,6 +32,18 @@ echo "server {
 }" > /etc/nginx/sites-enabled/principal
 
 
+#sed for the configuration file
+NGINX_CONF="/etc/nginx/nginx.conf"
+INCLUDE_LINE="include /etc/nginx/sites-enabled/*;"
+
+if ! grep -qF "$INCLUDE_LINE" "$NGINX_CONF"; then
+    echo "Adding sites-enabled directory to nginx.conf..."
+    # Insert the include line inside the `http` block
+    sed -i "/http {/a \\    $INCLUDE_LINE" "$NGINX_CONF"
+else
+    echo "sites-enabled already included in nginx.conf"
+fi
+
 
 #Creates server 
 python3 -m venv venv
